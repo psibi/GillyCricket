@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>GillyCricket</class>
+ <widget class="QMainWindow" name="GillyCricket">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,7 +16,14 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QTextEdit" name="GillyText">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -33,14 +40,13 @@
     <property name="title">
      <string>Gilly Cricket</string>
     </property>
-    <addaction name="actionFetch_Latest_Score"/>
+    <addaction name="actionRefresh"/>
     <addaction name="actionAbout"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
    <addaction name="menuGilly_Cricket"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
@@ -54,11 +60,6 @@
    <addaction name="actionRefresh"/>
    <addaction name="actionExit"/>
   </widget>
-  <action name="actionFetch_Latest_Score">
-   <property name="text">
-    <string>Fetch Latest Score</string>
-   </property>
-  </action>
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
@@ -79,7 +80,7 @@
      <normaloff>:/newPrefix/img/refresh.png</normaloff>:/newPrefix/img/refresh.png</iconset>
    </property>
    <property name="text">
-    <string>Refresh</string>
+    <string>Fetch Latest</string>
    </property>
    <property name="shortcut">
     <string>R</string>
